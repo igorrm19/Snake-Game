@@ -1,0 +1,41 @@
+.container{
+   height: 100vh;
+   width: 100vw;
+   background-color: aqua;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   flex-direction: column;
+   background-image: url("/public/76aa24bf1e433a13444c18c5df7b839b.gif");
+   background-repeat: repeat;
+   background-size: 100%;
+}
+
+.container-filho{
+    height: 50vh;
+    width: 50vw;
+    background-color: chocolate;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    border: 5px solid rgb(233, 136, 9);
+    box-shadow: 10px 10px 10px -5px #050505;
+    border-radius: 20px;
+
+}
+
+.fundo{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    height: 100%;
+    background-image: url("/public/grass-tiles-seamless-pixel-retro-260nw-1580846293.webp");
+    background-size: cover;
+}
+
