@@ -1,0 +1,26 @@
+
+
+export class Songs {
+    constructor() { }
+
+    SongPlay() {
+        const son = document.getElementById("buttonSom");
+
+        try {
+            son.play();
+        } catch (err) {
+            console.error("Erro inesperado no som", err);
+        }
+
+    }
+
+    MuttedPlay() {
+        const son = document.getElementById("buttonSom");
+
+        try {
+            son.MuttedPlay();
+        } catch (err) {
+            console.error("Erro inesperado no som", err);
+        }
+    }
+}
