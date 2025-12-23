@@ -1,8 +1,9 @@
 import { cobraDados } from "../models/cobra.model.js";
-import { AtualizarPontos } from "../ults/updatePontos.ultils.js"
+import { AtualizarPontos } from "../ults/updatePontos.ultils.js";
+
 
 export function Colisao() {
-
+    
     window.addEventListener("keydown", () => {
         const frutas = document.getElementById("fruta");
         const loc = frutas.getBoundingClientRect()
@@ -31,3 +32,5 @@ export function Colisao() {
         }
     });
 };
+
+

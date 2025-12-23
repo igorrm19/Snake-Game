@@ -1,7 +1,6 @@
 
 import { cobraDados } from "../models/cobra.model.js";
 
-
 export class SnakeKeyDown {
     
     constructor() {
@@ -9,6 +8,7 @@ export class SnakeKeyDown {
       cobraDados.localização[0]
       cobraDados.localização[1]
       this.snake = null
+      this.tamanho = 20
 
     }
 
@@ -59,10 +59,16 @@ export class SnakeKeyDown {
             canvas.style.left = cobraDados.localização[0] + "px";
             canvas.style.top = cobraDados.localização[1] + "px";
 
+            this.snake.clearRect(0, 0, canvas.width, canvas.height);
+
+            canvas.width = this.tamanho
+
             this.snake.fillStyle = "blue";
-            this.snake.fillRect(0, 0, canvas.width, canvas.height);
+            this.snake.fillRect(0, 0, this.tamanho, 20);
 
             //console.log(cobraDados.localização[0], cobraDados.localização[1]);
         });
     };
 };
+
+
