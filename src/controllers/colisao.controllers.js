@@ -1,4 +1,4 @@
-import { cobraDados } from "../models/cobra.model";
+import { cobraDados } from "../models/cobra.model.js";
 
 export function Colisao() {
 
@@ -16,9 +16,10 @@ export function Colisao() {
 
         let fruitX = Math.floor(loc.x)
         let cobraX = Math.floor(cobraDados.localização[0])
-        let calc = fruitX - 311
-        console.log(calc, cobraX); // Nessesario observable para pegar mudanças
+        let calc = fruitX - 458
+        console.log(calc, cobraX); // Nessesario observable para pegar mudanças 
         console.log(fruta)
+
 
         if (calc === cobraX) {
             alert("colidiu");  // Nessesario para capiturar fruta
