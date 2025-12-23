@@ -36,8 +36,8 @@ export class SnakeKeyDown {
 
                 case "ArrowRight":
                     cobraDados.localização[0] += 5;
-                    if (cobraDados.localização[0] > 620) {
-                        cobraDados.localização[0] = 620;
+                    if (cobraDados.localização[0] > 900) {
+                        cobraDados.localização[0] = 900;
                     }
                     break;
 
