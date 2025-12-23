@@ -1,13 +1,15 @@
-import { SnakeModelKeyDon } from "../models/model.window.keyDon.js";
+
+import { cobraDados } from "../models/cobra.model.js";
+
 
 export class SnakeKeyDown {
-
+    
     constructor() {
-      this.moddelSnake = new SnakeModelKeyDon()
-      
-      this.moddelSnake.posX
-      this.moddelSnake.posY
+
+      cobraDados.localização[0]
+      cobraDados.localização[1]
       this.snake = null
+
     }
 
     Mover() {
@@ -26,39 +28,41 @@ export class SnakeKeyDown {
             switch (tecla) {
 
                 case "ArrowLeft":
-                    this.moddelSnake.posX -= 5;
-                    if (this.moddelSnake.posX < 0) {
-                        this.moddelSnake.posX = 0;
+                    cobraDados.localização[0] -= 5;
+                    if (cobraDados.localização[0] < 0) {
+                        cobraDados.localização[0] = 0;
                     }
                     break;
 
                 case "ArrowRight":
-                    this.moddelSnake.posX += 5;
-                    if (this.moddelSnake.posX > 620) {
-                        this.moddelSnake.posX = 620;
+                    cobraDados.localização[0] += 5;
+                    if (cobraDados.localização[0] > 620) {
+                        cobraDados.localização[0] = 620;
                     }
                     break;
 
                 case "ArrowDown":
-                    this.moddelSnake.posY += 5;
-                    if (this.moddelSnake.posY > 430) {
-                        this.moddelSnake.posY = 430;
+                    cobraDados.localização[1] += 5;
+                    if (cobraDados.localização[1] > 430) {
+                        cobraDados.localização[1] = 430;
                     }
                     break;
 
                 case "ArrowUp":
-                    this.moddelSnake.posY -= 5;
-                    if (this.moddelSnake.posY < 0) {
-                        this.moddelSnake.posY = 0;
+                    cobraDados.localização[1] -= 5;
+                    if (cobraDados.localização[1] < 0) {
+                        cobraDados.localização[1] = 0;
                     }
                     break;
             }
 
-            canvas.style.left = this.moddelSnake.posX + "px";
-            canvas.style.top = this.moddelSnake.posY + "px";
+            canvas.style.left = cobraDados.localização[0] + "px";
+            canvas.style.top = cobraDados.localização[1] + "px";
 
             this.snake.fillStyle = "blue";
             this.snake.fillRect(0, 0, canvas.width, canvas.height);
+
+            console.log(cobraDados.localização[0], cobraDados.localização[1]);
         });
     };
 };
