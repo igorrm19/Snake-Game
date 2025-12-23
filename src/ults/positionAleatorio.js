@@ -1,3 +1,4 @@
+
 export function PositionAleatorio() {
     const fruta = document.getElementById("fruta");
 
