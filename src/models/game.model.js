@@ -5,10 +5,15 @@ export let game = {
     pontos: 0,
 }
 
-export function Render(){
-    if(ponto){
+export function Render() {
+    if (ponto) {
         ponto.innerHTML = game.pontos;
     }
+    setInterval(() => {
+        if (ponto) {
+            ponto.innerHTML = game.pontos;
+        }
+    }, 1000)
 }
 
 Render()

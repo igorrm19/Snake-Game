@@ -1,11 +1,5 @@
 import { cobraDados } from "../models/cobra.model.js";
-import { game, Render } from "../models/game.model.js";
-
-
-function AtualizarPontos(){
-  game.pontos += 10;
-  Render()
-}
+import { AtualizarPontos } from "../ults/updatePontos.ultils.js"
 
 export function Colisao() {
 
@@ -35,5 +29,5 @@ export function Colisao() {
         if (calc === cobraX || calc2 === cobraX || calc3 === cobraX || calc4 === cobraX) {
             AtualizarPontos();
         }
-    })
+    });
 };
