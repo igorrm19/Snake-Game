@@ -1,9 +1,11 @@
 
-
 export class SnakeKeyDown {
 
     constructor() {
-        this.value = 0;
+        this.valueLeft = 0;
+        this.valueRight = 0;
+        this.valueTop = 0;
+        this.valueBotton = 0;
         this.snake = null;
     }
 
@@ -19,21 +21,38 @@ export class SnakeKeyDown {
             this.snake.fillStyle = "blue";
             this.snake.fillRect(0, 0, canvas.width, canvas.height);
 
-            this.value += 5;
 
-            switch(tecla){
-                case "ArrowLeft": 
-                  canvas.style.marginRight = `${this.value}px`;
-                  break;
+            console.log(this.valueLeft, this.valueRight, this.valueTop, this.valueBotton)
+            switch (tecla) {
+
+                case "ArrowLeft":
+                    this.valueRight += 5;
+                    canvas.style.marginRight = `${this.valueRight}px`;
+                    if (this.valueRight > 20) {
+                        this.valueRight = -0.1;
+                    }
+                    break;
                 case "ArrowRight":
-                  canvas.style.marginLeft = `${this.value}px`;
-                  break;
+                    this.valueLeft += 5;
+                    canvas.style.marginLeft = `${this.valueLeft}px`;
+                    if (this.valueLeft > 345) {
+                        this.valueLeft = -0.1;
+                    }
+                    break;
                 case "ArrowDown":
-                   canvas.style.marginTop = `${this.value}px`;
-                   break;
+                    this.valueTop += 5;
+                    canvas.style.marginTop = `${this.valueTop}px`;
+                    if (this.valueTop > 55) {
+                        this.valueTop = -0.1;
+                    }
+                    break;
                 case "ArrowUp":
-                  canvas.style.marginBottom = `${this.value}px`;
-                  break;
+                    this.valueBotton += 5;
+                    canvas.style.marginBottom = `${this.valueBotton}px`;
+                    if (this.valueBotton > 800) {
+                        this.valueBotton = -0.1;
+                    }
+                    break;
             }
         });
     };
