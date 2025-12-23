@@ -5,6 +5,5 @@ const buttonPlay = new Button();
 const snakeMove = new SnakeKeyDown();
 
 buttonPlay.Play();
-
 snakeMove.Mover();
 

@@ -2,10 +2,8 @@
 export class SnakeKeyDown {
 
     constructor() {
-        this.valueLeft = 0;
-        this.valueRight = 0;
-        this.valueTop = 0;
-        this.valueBotton = 0;
+        this.posX = 90;
+        this.posY = 120;
         this.snake = null;
     }
 
@@ -13,47 +11,54 @@ export class SnakeKeyDown {
         const canvas = document.getElementById("cobra");
         this.snake = canvas.getContext("2d");;
 
+
         window.addEventListener("keydown", (event) => {
 
             const tecla = event.key
-            console.log("Teclado: ", tecla)
+            console.log("Teclado: ", this.posX, this.posY)
 
-            this.snake.fillStyle = "blue";
-            this.snake.fillRect(0, 0, canvas.width, canvas.height);
-
+            canvas.style.left = "0px";
+            canvas.style.top = "0px"
+            canvas.style.margin = "0";
 
             console.log(this.valueLeft, this.valueRight, this.valueTop, this.valueBotton)
             switch (tecla) {
 
                 case "ArrowLeft":
-                    this.valueRight += 5;
-                    canvas.style.marginRight = `${this.valueRight}px`;
-                    if (this.valueRight > 20) {
-                        this.valueRight = -0.1;
+                    this.posX -= 5;
+                    if (this.posX < 0) {
+                        this.posX = 0;
                     }
                     break;
+
                 case "ArrowRight":
-                    this.valueLeft += 5;
-                    canvas.style.marginLeft = `${this.valueLeft}px`;
-                    if (this.valueLeft > 345) {
-                        this.valueLeft = -0.1;
+                    this.posX += 5;
+                    if (this.posX > 620) {
+                        this.posX = 620;
                     }
                     break;
+
                 case "ArrowDown":
-                    this.valueTop += 5;
-                    canvas.style.marginTop = `${this.valueTop}px`;
-                    if (this.valueTop > 55) {
-                        this.valueTop = -0.1;
+                    this.posY += 5;
+                    if (this.posY > 430) {
+                        this.posY = 430;
                     }
                     break;
+
                 case "ArrowUp":
-                    this.valueBotton += 5;
-                    canvas.style.marginBottom = `${this.valueBotton}px`;
-                    if (this.valueBotton > 800) {
-                        this.valueBotton = -0.1;
+                    this.posY -= 5;
+                    if (this.posY < 0) {
+                        t
+                        his.posY = 0;
                     }
                     break;
             }
+
+            canvas.style.left = this.posX + "px";
+            canvas.style.top = this.posY + "px";
+
+            this.snake.fillStyle = "blue";
+            this.snake.fillRect(0, 0, canvas.width, canvas.height);
         });
     };
 };
