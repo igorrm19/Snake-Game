@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./src/styles/container.css">
+    <link rel="stylesheet" href="./src/styles/header.container.css">
     <title>Snake Game</title>
 </head>
+
 <body>
     <div class="container">
         <h2 style="color: rgb(255, 123, 0);">Snake Gamer</h2>
@@ -33,33 +36,64 @@
                 </a>
             </div>
         </button>
-       <div class="container-filho">
-          <div class="fundo">1</div>
-          <div class="fundo">2</div>
-          <div class="fundo">3</div>
-          <div class="fundo">4</div>
-          <div class="fundo">5</div>
-          <div class="fundo">6</div>
-          <div class="fundo">7</div>
-          <div class="fundo">8</div>
-          <div class="fundo">9</div>
-          <div class="fundo">10</div>
-          <div class="fundo">11</div>
-          <div class="fundo">12</div>
-          <div class="fundo">13</div>
-          <div class="fundo">14</div>
-          <div class="fundo">16</div>
-          <div class="fundo">17</div>
-          <div class="fundo">18</div>
-          <div class="fundo">19</div>
-          <div class="fundo">20</div>
-          <div class="fundo">21</div>
-          <div class="fundo">22</div>
-          <div class="fundo">23</div>
-          <div class="fundo">24</div>
-          <div class="fundo">25</div>
-          <div class="fundo">25</div>
-       </div>
+        <div class="container-filho">
+            <header class="header">
+                <div><h5 style="color: brown;">Contador: <span>00:00:00</span></h5>
+                  <div>
+                    <img src="./public/gif/pixel-heart.gif" alt="" height="25" width="25">
+                    <img src="./public/gif/pixel-heart.gif" alt="" height="25" width="25">
+                    <img src="./public/gif/pixel-heart.gif" alt="" height="25" width="25">
+                    <img src="./public/gif/pixel-heart.gif" alt="" height="25" width="25">
+                  </div>
+                </div>
+                <div><h3>Pontos: <span>0</span></h3></div>
+                <div>
+                    <button id="playBtn" style="background-color: transparent; border: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" color="black" fill="currentColor"
+                            class="bi bi-volume-up-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z" />
+                            <path
+                                d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z" />
+                            <path
+                                d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <div id="fundo-1" class="fundo"></div>
+            <div id="fundo-2" class="fundo"></div>
+            <div id="fundo-3" class="fundo"></div>
+            <div id="fundo-4" class="fundo"></div>
+            <div id="fundo-5" class="fundo"></div>
+            <div id="fundo-6" class="fundo"></div>
+            <div id="fundo-7" class="fundo"></div>
+            <div id="fundo-8" class="fundo"></div>
+            <div id="fundo-9" class="fundo"></div>
+            <div id="fundo-10" class="fundo"></div>
+            <div id="fundo-11" class="fundo">
+                <div id="fruta" style="display: none;">
+                    <img src="./public/gif/qup1a0fnj2p51.gif" alt=""  height="30" width="30">
+                </div>
+            </div>
+            <div id="fundo-12" class="fundo"></div>
+            <div id="fundo-13" class="fundo"></div>
+            <div id="fundo-14" class="fundo"></div>
+            <div id="fundo-15" class="fundo"></div>
+            <div id="fundo-16" class="fundo"></div>
+            <div id="fundo-17" class="fundo"></div>
+            <div id="fundo-18" class="fundo"></div>
+            <div id="fundo-19" class="fundo"></div>
+            <div id="fundo-20" class="fundo"></div>
+            <div id="fundo-21" class="fundo">
+                <canvas id="cobra" width="20" height="20" style="border:1px solid #0b29ac; position: absolute;"></canvas>
+            </div>
+            <div id="fundo-22" class="fundo"></div>
+            <div id="fundo-23" class="fundo"></div>
+            <div id="fundo-24" class="fundo"></div>
+            <div id="fundo-25" class="fundo"></div>
+        </div>
     </div>
 
     <audio id="buttonSom" autoplay="false" preload="auto">
@@ -68,4 +102,5 @@
 
     <script type="module" src="./src/main.js"></script>
 </body>
+
 </html>
