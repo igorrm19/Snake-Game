@@ -3,19 +3,18 @@ import { cobraDados } from "../models/cobra.model.js";
 
 export class SnakeKeyDown {
     
-    constructor() {
+    constructor(tam) {
 
       cobraDados.localização[0]
       cobraDados.localização[1]
       this.snake = null
-      this.tamanho = 20
+      this.tamanho = tam
 
     }
 
     Mover() {
         const canvas = document.getElementById("cobra");
-        this.snake = canvas.getContext("2d");;
-
+        this.snake = canvas.getContext("2d");
 
         window.addEventListener("keydown", (event) => {
 
@@ -61,7 +60,6 @@ export class SnakeKeyDown {
 
             this.snake.clearRect(0, 0, canvas.width, canvas.height);
 
-            canvas.width = this.tamanho
 
             this.snake.fillStyle = "blue";
             this.snake.fillRect(0, 0, this.tamanho, 20);

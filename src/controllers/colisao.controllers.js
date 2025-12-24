@@ -1,8 +1,13 @@
 import { cobraDados } from "../models/cobra.model.js";
 import { AtualizarPontos } from "../ults/updatePontos.ultils.js";
+import { SnakeKeyDown } from "./windows.keyEvent.js";
 
 
 export function Colisao() {
+    let tam = 20
+    let snake = new SnakeKeyDown(tam);
+    snake.Mover()
+    console.log(snake.tamanho)
     
     window.addEventListener("keydown", () => {
         const frutas = document.getElementById("fruta");
@@ -29,6 +34,7 @@ export function Colisao() {
 
         if (calc === cobraX || calc2 === cobraX || calc3 === cobraX || calc4 === cobraX) {
             AtualizarPontos();
+            snake.tamanho += 10;
         }
     });
 };
