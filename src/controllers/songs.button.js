@@ -16,9 +16,12 @@ export class Songs {
 
     MuttedPlay() {
         const son = document.getElementById("buttonSom");
+        const PlayMusic = document.getElementById("playMusic");
 
         try {
             son.MuttedPlay();
+            PlayMusic.MuttedPlay()
+
         } catch (err) {
             console.error("Erro inesperado no som", err);
         }

@@ -1,5 +1,6 @@
 import { Songs } from "./songs.button.js";
 import { PositionAleatorio } from "../ults/positionAleatorio.js";
+import { Cronometro } from "./cronometro.controllers.js";
 
 export class Button {
     constructor() { }
@@ -17,6 +18,7 @@ export class Button {
 
                 song.SongPlay();
                 song.PlayMusic();
+                Cronometro();
             });
 
         } catch (err) {
