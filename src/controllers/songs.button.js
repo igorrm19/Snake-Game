@@ -23,4 +23,10 @@ export class Songs {
             console.error("Erro inesperado no som", err);
         }
     }
+
+    PlayMusic(){
+        const PlayMusic = document.getElementById("playMusic");
+
+        PlayMusic.play();
+    }
 }

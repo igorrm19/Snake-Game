@@ -16,6 +16,7 @@ export class Button {
                 PositionAleatorio();
 
                 song.SongPlay();
+                song.PlayMusic();
             });
 
         } catch (err) {

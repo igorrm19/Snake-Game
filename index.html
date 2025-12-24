@@ -38,7 +38,7 @@
         </button>
         <div class="container-filho">
             <header class="header">
-                <div><h5 style="color: brown;">Contador: <span>00:00:00</span></h5>
+                <div><h5 style="color: brown; display: flex;">Contado: <p id="horas">00</p>:<p id="minutos">00</p>:<p id="segundos">00</p></h5>
                   <div>
                     <img src="./public/gif/pixel-heart.gif" alt="" height="25" width="25">
                     <img src="./public/gif/pixel-heart.gif" alt="" height="25" width="25">
@@ -96,8 +96,12 @@
         </div>
     </div>
 
+    
     <audio id="buttonSom" autoplay="false" preload="auto">
         <source src="./public/mp3/Voicy_Roblox Button.mp3" type="audio/mp3">
+    </audio>
+    <audio id="playMusic" autoplay="false" preload="auto">
+        <source src="./public/mp3/Budapest Art Orchestra - Swan Lake Op20 Act 1  No9.mp3" type="audio/mp3">
     </audio>
 
     <script type="module" src="./src/main.js"></script>

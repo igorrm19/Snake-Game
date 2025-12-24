@@ -25,7 +25,7 @@ export function Colisao() {
         let calc = fruitX - 457
         let calc2 = fruitX - 458
         let calc3 = fruitX - 456
-        let calc4 = fruitX - 459
+        let calc4 = fruitX - 460
 
         let cobraX = Math.floor(cobraDados.localização[0])
         console.log(calc, cobraX); // Nessesario observable para pegar mudanças 
