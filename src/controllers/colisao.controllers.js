@@ -2,12 +2,13 @@
 import { AtualizarPontos } from "../ults/updatePontos.ultils.js";
 //import { SnakeKeyDown } from "./windows.keyEvent.js";
 import { cobraDados } from "../models/cobra.model.js";
+import { PositionAleatorio } from "../ults/positionAleatorio.js";
 
 
 export function Colisao() {
-  
+
     //console.log(snake.tamanho);
-    
+
     window.addEventListener("keydown", () => {
         const frutas = document.getElementById("fruta");
         const loc = frutas.getBoundingClientRect();
@@ -39,9 +40,17 @@ export function Colisao() {
 
         if (calc === cobraX || calc2 === cobraX || calc3 === cobraX || calc4 === cobraX || calc5 === cobraX || calc6 === cobraX || calc7 === cobraX || calc8 === cobraX || calc9 === cobraX || calc10 === cobraX) {
             AtualizarPontos();
+            const fruta = document.getElementById("fruta");
             //snake.tamanho += 10
             cobraDados.tamanho += 10;
+            const max = 25;
+            const number = Math.floor(Math.random() * (max + 1));
+
+            const fundo1 = document.getElementById(`fundo-${number}`);
+            fundo1.appendChild(fruta)
+
             console.log(cobraDados.tamanho - 20)
+            console.log("objeto cobra ", cobraDados)
         };
     });
 };

@@ -77,6 +77,7 @@ export class SnakeKeyDown {
             this.snake.fillStyle = "blue";
             this.snake.fillRect(0, 0, cobraDados.tamanho, 20);
 
+            console.log("objeto cobra ", cobraDados)
             //console.log(cobraDados.localização[0], cobraDados.localização[1]);
         });
     };

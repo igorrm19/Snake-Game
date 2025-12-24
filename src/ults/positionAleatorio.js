@@ -2,7 +2,7 @@
 export function PositionAleatorio() {
     const fruta = document.getElementById("fruta");
 
-
+    
     fruta.style.display = "block";
 
     setInterval(() => {
@@ -11,6 +11,6 @@ export function PositionAleatorio() {
 
         const fundo1 = document.getElementById(`fundo-${number}`);
         fundo1.appendChild(fruta)
-    }, 10000)
+    }, 10000);
 
 }
