@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     buttonPlay.Play();
     snakeMove.Mover();
     Colisao();
-
 });
 
 const muted = document.getElementById("playBtn")
