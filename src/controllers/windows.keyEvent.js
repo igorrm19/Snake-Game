@@ -39,18 +39,18 @@ export class SnakeKeyDown {
             switch (tecla) {
 
                 case "ArrowLeft":
-                    cobraDados.localização[this.x] -= 5;
-                    if (cobraDados.localização[this.x] < 0) {
-                        cobraDados.localização[this.x];
+                    cobraDados.localização[0] -= 5;
+                    if (cobraDados.localização[0] < 0) {
+                        cobraDados.localização[0];
                         this.Resete();
                     }
 
                     break;
 
                 case "ArrowRight":
-                    cobraDados.localização[this.y] += 5;
-                    if (cobraDados.localização[this.y] > 900) {
-                        cobraDados.localização[this.y] = 900;
+                    cobraDados.localização[this.x] += 5;
+                    if (cobraDados.localização[this.x] > 900) {
+                        cobraDados.localização[this.x] = 900;
                         this.Resete();
                     }
 
@@ -89,6 +89,3 @@ export class SnakeKeyDown {
         });
     };
 };
-
-
-

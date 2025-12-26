@@ -7,13 +7,14 @@ import { game } from "./models/game.model.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const buttonPlay = new Button();
-    const snakeMove = new SnakeKeyDown();
+    //const snakeMove = new SnakeKeyDown();
+    const snakeGameInstance = new SnakeKeyDown(); 
 
     const ponto = document.getElementById("pontos");
     ponto.innerHTML = `${game.pontos}`
 
     buttonPlay.Play();
-    snakeMove.Mover();
+    snakeGameInstance.Mover()
     Colisao();
 });
 
