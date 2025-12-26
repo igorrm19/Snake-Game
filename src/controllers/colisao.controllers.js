@@ -2,7 +2,7 @@
 import { AtualizarPontos } from "../ults/updatePontos.ultils.js";
 //import { SnakeKeyDown } from "./windows.keyEvent.js";
 import { cobraDados } from "../models/cobra.model.js";
-import { PositionAleatorio } from "../ults/positionAleatorio.js";
+//import { PositionAleatorio } from "../ults/positionAleatorio.js";
 
 
 export function Colisao() {
